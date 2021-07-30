@@ -1,0 +1,80 @@
+<html>
+<head>
+    <title> F1 </title>
+<style>
+body
+  {
+   background-image: url('b2.jpg');
+   background-repeat:no-repeat;
+   background-attachement:fixed;
+   background-size:100%100%;
+  }
+table{
+border: 2px solid black;
+} 
+table{
+border-spacing:10px;
+}
+th
+{
+color:Purple;
+}
+td
+{
+color:orange;
+}
+th,td{
+ padding: 5px;
+ font-weight: bold;
+}
+h1
+{
+ background-color:orange;
+ font-family:couriernew;
+ font-size:200%;
+ transition: width 2s, height 2s, transform 2s;
+} 
+h1:hover {
+  width: 250px;
+}
+</style>
+    
+</head>
+<body >
+<table align="Center" width="50%" style="background-color:seashell">
+<form id="form1">
+<center>
+   <h1><b><i> ECE Department </b></i></h2></font> 
+   <img src="mba.jpg" align="middle" width="250" height="150" class="image"></center><br>
+
+<tr><td>Name :  <input type="text" size="20" name="name"/><br></tr></td>
+<tr><td>Roll No.  :  <input type="text" size="20" name="roll"/><br></tr></td>
+<tr><td>Year          :  <input type="text" size="8" name="year"/><br></tr></td>
+<tr><td>Tuition Fees  :  <input type="number" size="6" name="tut_f"/><br></tr></td>
+<tr><td>Book Fees     :  <input type="number" size="6" name="book_f"/><br></tr></td>
+<tr><td>Bus Fees      :  <input type="number" size="6" name="bus_f"/><br></tr></td>
+<tr><td> <input type="button" name="btn" value="Calculate" onclick="calc()"/><br></tr></td>
+<tr><td>Total Fees   :<input type="number" size="6" name="tot"/><br></tr></td>
+<tr><td><input type="reset" name="Btn2" value="Reset"/></td><tr>
+</form>
+</table><center>
+<font color="White"><h2></h2></font>
+</center>
+<script type="text/javascript">
+    function calc()
+    {
+      form=document.getElementById("form1");
+      tut_f=form.tut_f.value;
+      bus_f=form.bus_f.value;
+      book_f=form.book_f.value;
+
+      tut_f=parseFloat(tut_f);
+      bus_f=parseFloat(bus_f);
+      book_f=parseFloat(book_f)
+     
+      tot=parseFloat(tut_f+bus_f+book_f);
+      form.tot.value=parseFloat(tot);
+    }
+</script>
+</body>
+</html>
